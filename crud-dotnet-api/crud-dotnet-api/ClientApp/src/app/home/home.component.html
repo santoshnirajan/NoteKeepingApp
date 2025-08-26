@@ -1,0 +1,131 @@
+
+<nav class="navbar navbar-expand-lg" style="background-color: rgb(186, 238, 144);">
+  <div class="container-fluid">
+    <a class="navbar-brand">Home</a>
+    <a [routerLink]="['/fileupload']">Upload Files</a>
+    <a style="margin-left: 10px;" [routerLink]="['/qr-code']">Generate QR</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+
+      <div class="d-flex align-items-center">
+        <button *ngIf="!IsUpdate" class="btn btn-primary me-2" (click)="Add()">Add Note</button>
+        <button class="btn btn-danger me-3" (click)="OnLogout()">Logout</button>
+
+        <!-- User icon with username -->
+        <div class="d-flex align-items-center">
+          <i class="bi bi-person-circle" style="font-size: 35px; margin-right: 8px;"></i>
+          <span>{{ jwtPayLoad.UserName }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  
+  
+
+<!-- Modal Structure -->
+<div tabindex="-1" aria-labelledby="addNoteModalLabel" *ngIf="IsAddNote" style="margin-top: 20px;">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content" style="border: 3px solid #ddd; background-color: #86bc88; padding: 15px;">
+        <div class="modal-header d-flex justify-content-between align-items-center">
+          <h5 class="modal-title mb-0" id="addNoteModalLabel">Add Note</h5>
+          <button class="btn btn-danger btn-sm" (click)="Close()">Cancel</button>
+        </div>
+        <div class="modal-body">
+          <!-- Registration Form -->
+          <form [formGroup]="NoteRegistrationForm" id="noteForm">
+            <div class="mb-3"  [ngClass]="{'has-error': IsFieldInvalid('Title')}" style="flex: 1;" >
+              <label for="Title" class="form-label">Title</label>
+              <input type="text" class="form-control" id="Title" name="Title" formControlName="Title" required />
+              <div *ngIf="IsFieldInvalid('Title')" class="error-message" style="color: red; font-size: 12px; margin-top: 5px;">
+                Please fill the field
+              </div>
+            </div>
+            <div class="mb-3"  [ngClass]="{'has-error': IsFieldInvalid('Label')}" style="flex: 1;" >
+              <label for="Label" class="form-label">Label</label>
+              <input type="text" class="form-control" id="Label" name="Label" formControlName="Label" required />
+              <div *ngIf="IsFieldInvalid('Label')" class="error-message" style="color: red; font-size: 12px; margin-top: 5px;">
+                Please fill the field
+              </div>
+            </div>
+            <div class="mb-3"  [ngClass]="{'has-error': IsFieldInvalid('BackgroundColor')}" style="flex: 1;">
+              <label for="backgroundColor" class="form-label">Content Background Color</label>
+              <input type="color"class="form-control form-control-color"id="backgroundColor"name="backgroundColor" value="#f8f9fa" formControlName="BackgroundColor" required/>
+              <div *ngIf="IsFieldInvalid('BackgroundColor')" class="error-message" style="color: red; font-size: 12px; margin-top: 5px;">
+                Please fill the field
+              </div>
+            </div>
+            <div class="mb-3"  [ngClass]="{'has-error': IsFieldInvalid('FontColor')}" style="flex: 1;">
+              <label for="FontColor" class="form-label">Font Color</label>
+              <input type="color" class="form-control form-control-color" id="FontColor"name="FontColor" value="#000000" formControlName="FontColor" required/>
+              <div *ngIf="IsFieldInvalid('FontColor')" class="error-message" style="color: red; font-size: 12px; margin-top: 5px;">
+                Please fill the field
+              </div>
+            </div>
+            <div class="mb-3"  [ngClass]="{'has-error': IsFieldInvalid('Content')}" style="flex: 1;">
+              <label for="Content" class="form-label">Note Content</label>
+              <textarea class="form-control" id="Content" rows="3" name="Content" formControlName="Content" required></textarea>
+              <div *ngIf="IsFieldInvalid('Content')" class="error-message" style="color: red; font-size: 12px; margin-top: 5px;">
+                Please fill the field
+              </div>
+            </div>  
+            <button *ngIf="!IsUpdate" type="submit" class="btn btn-primary" (click)="onSubmit()">Save Note</button>
+            <button *ngIf="IsUpdate" type="submit" class="btn btn-primary" (click)="UpdateNote()" >Update Note</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div style="display: flex; flex-direction: column; margin: 20px 0;" *ngIf="ShowNotes">
+    <label style="font-size: 16px; font-weight: bold; margin-bottom: 8px; color: #333; margin-left: 10px;">
+      Search Notes
+    </label>
+    <input
+      type="text"
+      placeholder="Search by title, label, or content"
+      style="padding: 10px; border: 2px solid #ccc; border-radius: 4px; font-size: 14px; width: 25%; box-sizing: border-box; transition: border-color 0.3s ease; margin-left: 10px;"
+      onfocus="this.style.borderColor='#66afe9';" 
+      onblur="this.style.borderColor='#ccc';"
+      [(ngModel)]="searchTerm"
+    />
+  </div>
+  
+  
+
+
+  <div *ngIf="ShowNotes">
+  <div *ngFor="let item of filteredData() let i = index"
+  [ngStyle]="{'background-color': item.BackgroundColor, 'color': item.FontColor}"
+  class="note-card">
+  <p [ngStyle]="{'color': item.FontColor}" class="note-meta">
+    <strong>Created On: {{ item.CreatedOn | date }}</strong> &nbsp;
+    <!-- <strong>Updated On: {{ item.ModifiedOn | date }}</strong> -->
+  </p>
+  <h3 [ngStyle]="{'color': item.FontColor}" class="note-title">{{ item.Title }}</h3>
+  <p [ngStyle]="{'color': item.FontColor}" class="note-label">{{ item.Label }}</p>
+  <p [ngStyle]="{'color': item.FontColor}" class="note-content scrollable-content">
+    {{ item.Content }}
+  </p>
+  <div class="note-actions">
+    <button class="edit-button" (click)="EditNote(item)">Edit</button>
+    <button class="delete-button"(click)="DeleteNote(item)" >Delete</button>
+  </div>
+</div>
+
+
+

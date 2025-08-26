@@ -1,0 +1,157 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\AccessmentProject\\crud-dotnet-api\\crud-dotnet-api\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{163F69C4-DB33-4B2F-9CF7-4C4B06895AE7}|crud-dotnet-api\\crud-dotnet-api.csproj|d:\\accessmentproject\\crud-dotnet-api\\crud-dotnet-api\\crud-dotnet-api\\controllers\\notescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{163F69C4-DB33-4B2F-9CF7-4C4B06895AE7}|crud-dotnet-api\\crud-dotnet-api.csproj|solutionrelative:crud-dotnet-api\\controllers\\notescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{163F69C4-DB33-4B2F-9CF7-4C4B06895AE7}|crud-dotnet-api\\crud-dotnet-api.csproj|d:\\accessmentproject\\crud-dotnet-api\\crud-dotnet-api\\crud-dotnet-api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{163F69C4-DB33-4B2F-9CF7-4C4B06895AE7}|crud-dotnet-api\\crud-dotnet-api.csproj|solutionrelative:crud-dotnet-api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{163F69C4-DB33-4B2F-9CF7-4C4B06895AE7}|crud-dotnet-api\\crud-dotnet-api.csproj|d:\\accessmentproject\\crud-dotnet-api\\crud-dotnet-api\\crud-dotnet-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{163F69C4-DB33-4B2F-9CF7-4C4B06895AE7}|crud-dotnet-api\\crud-dotnet-api.csproj|solutionrelative:crud-dotnet-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{163F69C4-DB33-4B2F-9CF7-4C4B06895AE7}|crud-dotnet-api\\crud-dotnet-api.csproj|d:\\accessmentproject\\crud-dotnet-api\\crud-dotnet-api\\crud-dotnet-api\\cqrs\\commands\\loginusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{163F69C4-DB33-4B2F-9CF7-4C4B06895AE7}|crud-dotnet-api\\crud-dotnet-api.csproj|solutionrelative:crud-dotnet-api\\cqrs\\commands\\loginusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{163F69C4-DB33-4B2F-9CF7-4C4B06895AE7}|crud-dotnet-api\\crud-dotnet-api.csproj|d:\\accessmentproject\\crud-dotnet-api\\crud-dotnet-api\\crud-dotnet-api\\model\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{163F69C4-DB33-4B2F-9CF7-4C4B06895AE7}|crud-dotnet-api\\crud-dotnet-api.csproj|solutionrelative:crud-dotnet-api\\model\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{163F69C4-DB33-4B2F-9CF7-4C4B06895AE7}|crud-dotnet-api\\crud-dotnet-api.csproj|d:\\accessmentproject\\crud-dotnet-api\\crud-dotnet-api\\crud-dotnet-api\\model\\notemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{163F69C4-DB33-4B2F-9CF7-4C4B06895AE7}|crud-dotnet-api\\crud-dotnet-api.csproj|solutionrelative:crud-dotnet-api\\model\\notemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{163F69C4-DB33-4B2F-9CF7-4C4B06895AE7}|crud-dotnet-api\\crud-dotnet-api.csproj|d:\\accessmentproject\\crud-dotnet-api\\crud-dotnet-api\\crud-dotnet-api\\cqrs\\commands\\registeruserhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{163F69C4-DB33-4B2F-9CF7-4C4B06895AE7}|crud-dotnet-api\\crud-dotnet-api.csproj|solutionrelative:crud-dotnet-api\\cqrs\\commands\\registeruserhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{163F69C4-DB33-4B2F-9CF7-4C4B06895AE7}|crud-dotnet-api\\crud-dotnet-api.csproj|d:\\accessmentproject\\crud-dotnet-api\\crud-dotnet-api\\crud-dotnet-api\\cqrs\\commands\\registerusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{163F69C4-DB33-4B2F-9CF7-4C4B06895AE7}|crud-dotnet-api\\crud-dotnet-api.csproj|solutionrelative:crud-dotnet-api\\cqrs\\commands\\registerusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NotesController.cs",
+              "DocumentMoniker": "D:\\AccessmentProject\\crud-dotnet-api\\crud-dotnet-api\\crud-dotnet-api\\Controllers\\NotesController.cs",
+              "RelativeDocumentMoniker": "crud-dotnet-api\\Controllers\\NotesController.cs",
+              "ToolTip": "D:\\AccessmentProject\\crud-dotnet-api\\crud-dotnet-api\\crud-dotnet-api\\Controllers\\NotesController.cs",
+              "RelativeToolTip": "crud-dotnet-api\\Controllers\\NotesController.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAkwEYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T12:12:13.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\AccessmentProject\\crud-dotnet-api\\crud-dotnet-api\\crud-dotnet-api\\Program.cs",
+              "RelativeDocumentMoniker": "crud-dotnet-api\\Program.cs",
+              "ToolTip": "D:\\AccessmentProject\\crud-dotnet-api\\crud-dotnet-api\\crud-dotnet-api\\Program.cs",
+              "RelativeToolTip": "crud-dotnet-api\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T12:11:44.126Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginUserCommand.cs",
+              "DocumentMoniker": "D:\\AccessmentProject\\crud-dotnet-api\\crud-dotnet-api\\crud-dotnet-api\\CQRS\\Commands\\LoginUserCommand.cs",
+              "RelativeDocumentMoniker": "crud-dotnet-api\\CQRS\\Commands\\LoginUserCommand.cs",
+              "ToolTip": "D:\\AccessmentProject\\crud-dotnet-api\\crud-dotnet-api\\crud-dotnet-api\\CQRS\\Commands\\LoginUserCommand.cs",
+              "RelativeToolTip": "crud-dotnet-api\\CQRS\\Commands\\LoginUserCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T12:10:24.539Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoginModel.cs",
+              "DocumentMoniker": "D:\\AccessmentProject\\crud-dotnet-api\\crud-dotnet-api\\crud-dotnet-api\\Model\\LoginModel.cs",
+              "RelativeDocumentMoniker": "crud-dotnet-api\\Model\\LoginModel.cs",
+              "ToolTip": "D:\\AccessmentProject\\crud-dotnet-api\\crud-dotnet-api\\crud-dotnet-api\\Model\\LoginModel.cs",
+              "RelativeToolTip": "crud-dotnet-api\\Model\\LoginModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T11:54:47.805Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "NoteModel.cs",
+              "DocumentMoniker": "D:\\AccessmentProject\\crud-dotnet-api\\crud-dotnet-api\\crud-dotnet-api\\Model\\NoteModel.cs",
+              "RelativeDocumentMoniker": "crud-dotnet-api\\Model\\NoteModel.cs",
+              "ToolTip": "D:\\AccessmentProject\\crud-dotnet-api\\crud-dotnet-api\\crud-dotnet-api\\Model\\NoteModel.cs",
+              "RelativeToolTip": "crud-dotnet-api\\Model\\NoteModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T11:54:46.606Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RegisterUserHandler.cs",
+              "DocumentMoniker": "D:\\AccessmentProject\\crud-dotnet-api\\crud-dotnet-api\\crud-dotnet-api\\CQRS\\Commands\\RegisterUserHandler.cs",
+              "RelativeDocumentMoniker": "crud-dotnet-api\\CQRS\\Commands\\RegisterUserHandler.cs",
+              "ToolTip": "D:\\AccessmentProject\\crud-dotnet-api\\crud-dotnet-api\\crud-dotnet-api\\CQRS\\Commands\\RegisterUserHandler.cs",
+              "RelativeToolTip": "crud-dotnet-api\\CQRS\\Commands\\RegisterUserHandler.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAgAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T11:45:00.564Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RegisterUserCommand.cs",
+              "DocumentMoniker": "D:\\AccessmentProject\\crud-dotnet-api\\crud-dotnet-api\\crud-dotnet-api\\CQRS\\Commands\\RegisterUserCommand.cs",
+              "RelativeDocumentMoniker": "crud-dotnet-api\\CQRS\\Commands\\RegisterUserCommand.cs",
+              "ToolTip": "D:\\AccessmentProject\\crud-dotnet-api\\crud-dotnet-api\\crud-dotnet-api\\CQRS\\Commands\\RegisterUserCommand.cs",
+              "RelativeToolTip": "crud-dotnet-api\\CQRS\\Commands\\RegisterUserCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T11:44:48.929Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\AccessmentProject\\crud-dotnet-api\\crud-dotnet-api\\crud-dotnet-api\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "crud-dotnet-api\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\AccessmentProject\\crud-dotnet-api\\crud-dotnet-api\\crud-dotnet-api\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "crud-dotnet-api\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABgAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T11:44:36.285Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

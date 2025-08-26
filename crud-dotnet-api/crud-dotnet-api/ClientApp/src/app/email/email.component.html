@@ -1,0 +1,25 @@
+<div class="button-container">
+    <!-- Back Button on the left -->
+    <button (click)="goBack()" class="btn btn-info">
+      <i class="fa fa-arrow-left"></i> Back
+    </button>
+</div>
+<h2 mat-dialog-title>Send Message</h2>
+<form [formGroup]="messageForm" (ngSubmit)="sendMessage()">
+  <div>
+    <label for="email">Recipient's Email:</label>
+    <input id="email" formControlName="email" type="email" placeholder="Enter recipient's email" required>
+  </div>
+
+  <div>
+    <label for="subject">Subject:</label>
+    <input id="subject" formControlName="subject" type="text" placeholder="Enter subject" required>
+  </div>
+
+  <div>
+    <label for="message">Message:</label>
+    <textarea id="message" formControlName="message" placeholder="Enter message" rows="5" required></textarea>
+  </div>
+
+  <button type="submit" mat-button >Send Message</button>
+</form>

@@ -1,0 +1,19 @@
+<div class="form-container">
+    <button class="back-button" (click)="goBack()">← Back</button>
+  
+    <form [formGroup]="infoForm" (ngSubmit)="generateQRCode()" class="info-form">
+      <h2>Personal Info</h2>
+      <input formControlName="name" placeholder="Full Name" />
+      <input formControlName="email" placeholder="Email Address" />
+      <input formControlName="phone" placeholder="Phone Number" />
+      <input formControlName="address" placeholder="Address" />
+      <button type="submit">Generate QR Code</button>
+    </form>
+  
+    <div class="qr-preview" *ngIf="qrCodeUrl">
+      <h3>Generated QR Code</h3>
+      <img [src]="qrCodeUrl" alt="QR Code" />
+    </div>
+  </div>
+  
+  

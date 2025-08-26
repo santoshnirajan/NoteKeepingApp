@@ -1,0 +1,52 @@
+
+<section class="vh-100">
+  <div class="container-fluid">
+    <div class="row" style="background-color: rgb(248, 196, 233);">
+      <div class=" text-black d-flex align-items-center justify-content-center vh-100">
+        <div class="login-form">
+            <form>
+                <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Log in</h3>
+
+                <div class="form-outline mb-2 d-flex align-items-center">
+                  <label>Username:-</label>
+                  <input 
+                  type="email" 
+                  id="login" 
+                  [(ngModel)]="LoginObj.UserName" 
+                  name="UserName" 
+                  class="form-control" 
+                  style="margin-left: 10px;"
+                  (input)="clearError()"/>
+                </div>
+                <div class="form-outline mb-2 d-flex align-items-center position-relative">
+                  <label>Password:-</label>
+                
+                  <input [type]="showPasswordText ? 'text' : 'password'" 
+                         [(ngModel)]="LoginObj.Password" 
+                         id="password" 
+                         name="Password" 
+                         class="form-control" 
+                         (input)="clearError()"
+                         style="margin-left: 12px; padding-right: 40px;" />
+                  <i class="fa" 
+                     [ngClass]="showPasswordText ? 'fa-eye-slash' : 'fa-eye'" 
+                     (click)="togglePassword()" 
+                     style="position: absolute; right: 10px; cursor: pointer;">
+                  </i>
+                </div>
+                
+                <div class="pt-1 mb-4">
+                    <button data-mdb-ripple-init class="btn btn-primary btn-lg" type="submit" (click)="OnLogin()">Login</button>
+                </div>
+                <div *ngIf="errorMessage" class="alert alert-danger mt-2">
+                  {{ errorMessage }}
+                </div>
+                <p class="register-link">New User? <a [routerLink]="['/registration']">Register here</a></p>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+

@@ -1,0 +1,84 @@
+body{
+    background-color: #525252;
+}
+.centered-form{
+	margin-top: 60px;
+}
+
+.centered-form .panel{
+	background: rgba(255, 255, 255, 0.8);
+	box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+}
+.file-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  
+  .file-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .file-preview {
+    max-width: 100px;
+    margin-top: 0.5rem;
+  }
+  
+  .sticker-preview {
+    max-width: 50px; /* Customize sticker size if different from images */
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .btn {
+    flex: 0 0 auto; /* Ensures buttons do not stretch */
+  }
+  
+  .upload-button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Centers the button horizontally */
+  }
+  
+  .file-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .file-name {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+
+  .btn-success {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .file-preview {
+    width: 100px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .file-preview {
+    max-height: 200px;
+    object-fit: cover;
+  }
+  
+  .file-icon {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+  }

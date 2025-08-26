@@ -1,0 +1,71 @@
+<div class="body">
+  <div class="form-container">
+    <form [formGroup]="RegistrationForm" (ngSubmit)="onSubmit()">
+      <h2>User Registration</h2>
+
+      <!-- First & Last Name -->
+      <div class="form-row">
+        <div class="input-group" [ngClass]="{'has-error': IsFieldInvalid('FirstName')}">
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" formControlName="FirstName" required>
+          <div *ngIf="IsFieldInvalid('FirstName')" class="error-message">
+            Please fill the field
+          </div>
+        </div>
+
+        <div class="input-group" [ngClass]="{'has-error': IsFieldInvalid('LastName')}">
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" formControlName="LastName" required>
+          <div *ngIf="IsFieldInvalid('LastName')" class="error-message">
+            Please fill the field
+          </div>
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="input-group" [ngClass]="{'has-error': IsFieldInvalid('Email')}">
+        <label for="email">Email</label>
+        <input type="email" id="email" formControlName="Email" required>
+        <div *ngIf="IsFieldInvalid('Email')" class="error-message">
+          Enter a valid email
+        </div>
+      </div>
+
+      <!-- Username -->
+      <div class="input-group" [ngClass]="{'has-error': IsFieldInvalid('UserName')}">
+        <label for="username">Username</label>
+        <input type="text" id="username" formControlName="UserName" required>
+        <div *ngIf="IsFieldInvalid('UserName')" class="error-message">
+          Username must contain letters and numbers
+        </div>
+      </div>
+
+      <!-- Password Field -->
+<div class="input-group" [ngClass]="{'has-error': IsFieldInvalid('Password')}">
+  <label for="password">Password</label>
+  <div class="password-wrapper">
+    <input [type]="showPassword ? 'text' : 'password'" id="password" formControlName="Password" required>
+    <i class="fa" [ngClass]="showPassword ? 'fa-eye-slash' : 'fa-eye'" (click)="togglePassword('password')"></i>
+  </div>
+  <div *ngIf="IsFieldInvalid('Password')" class="error-message">
+    Password must contain special characters, numbers, and uppercase letters
+  </div>
+</div>
+
+<!-- Confirm Password Field -->
+<div class="input-group" [ngClass]="{'has-error': IsFieldInvalid('ConfirmPassword') || RegistrationForm.hasError('mismatch')}">
+  <label for="confirm-password">Confirm Password</label>
+  <div class="password-wrapper">
+    <input [type]="showPasswordConfirm ? 'text' : 'password'" id="confirm-password" formControlName="ConfirmPassword" required>
+    <i class="fa" [ngClass]="showPasswordConfirm ? 'fa-eye-slash' : 'fa-eye'" (click)="togglePassword('confirm')"></i>
+  </div>
+  <div *ngIf="RegistrationForm.hasError('mismatch')" class="error-message">
+    Passwords do not match
+  </div>
+</div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="register-btn">Register</button>
+    </form>
+  </div>
+</div>

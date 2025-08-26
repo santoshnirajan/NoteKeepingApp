@@ -1,0 +1,89 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+ 
+<div class="button-container">
+    <!-- Back Button on the left -->
+    <button (click)="goBack()" class="btn btn-info">
+      <i class="fa fa-arrow-left"></i> Back
+    </button>
+  
+    <!-- Upload File Button centered in the screen -->
+    <input
+      type="submit"
+      value="Upload File"
+      (click)="OpenAddFilePopup()"
+      class="btn btn-info upload-button"
+    />
+  </div>
+     
+<div class="container" *ngIf="openPopup">
+    <div class="row centered-form">
+      <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Welcome to File Upload</h3>
+          </div>
+          <div class="panel-body">
+            <form role="form" [formGroup]="FileForm" (ngSubmit)="OnSaveFile()">
+              <div class="form-group">
+                <label for="file">File:</label>
+                <input type="file" name="file" accept=".pdf, .jpeg, .jpg, .gif, .png" id="file" class="form-control input-sm" (change)="onFileSelected($event)" placeholder="File" />
+              </div>
+  
+              <div class="form-group">
+                <label for="altText">Alt Text:</label>
+                <input type="text" name="altText" id="altText" formControlName="AltText" class="form-control input-sm" placeholder="Alt Text" />
+              </div>
+  
+              <div class="form-group">
+                <label for="description">Description:</label>
+                <input type="text" name="description" id="description" formControlName="Description" class="form-control input-sm" placeholder="Description" />
+              </div>
+  
+              <input type="submit" value="Upload File" [disabled]="!selectedFile" class="btn btn-info btn-block" />
+              <input type="submit" value="Cancel"class="btn btn-info btn-block" (click)="Close()" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div *ngIf="showDownloads" class="uploaded-files mt-4">
+    <h4 class="mb-3">Uploaded Files</h4>
+  
+    <div class="row">
+      <div *ngFor="let file of downloadedFiles" class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          
+          <!-- Show preview if image -->
+          <img *ngIf="isImage(file.FileName)" 
+               [src]="file.Url" 
+               [alt]="file.AltText || 'Preview'" 
+               class="card-img-top file-preview">
+  
+          <!-- File icon if not image -->
+          <div *ngIf="!isImage(file.FileName)" class="file-icon text-center p-4">
+            <i class="fa fa-file fa-4x text-secondary"></i>
+          </div>
+  
+          <div class="card-body d-flex flex-column">
+            <h6 class="card-title text-truncate">{{ file.FileName }}</h6>
+            <p class="card-text text-muted small mb-2">{{ file.Description || 'No description' }}</p>
+            <div class="mt-auto">
+              <button class="btn btn-success btn-sm w-100" (click)="downloadFile(file.FilePath)">
+                <i class="fa fa-download"></i> Download
+              </button>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+
+
+  

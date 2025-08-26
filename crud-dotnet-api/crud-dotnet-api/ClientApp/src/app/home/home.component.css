@@ -1,0 +1,77 @@
+.modal-dialog {
+    max-width: 600px; /* Adjust the size as needed */
+  }
+
+  .note-card {
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    margin-bottom: 8px;
+}
+
+.note-meta {
+    font-size: 0.9em;
+    margin: 4px 0; /* Reduce vertical margins to minimize space */
+    font-size: 14px; 
+    text-align: right;
+}
+
+.note-title {
+    font-size: 1.5em;
+    margin: 4px 0; /* Reduce vertical margins to minimize space */
+   font-size: 14px; 
+}
+.note-label,
+.note-content {
+  margin: 4px 0; /* Reduce vertical margins to minimize space */
+  font-size: 14px; 
+}
+
+.note-actions {
+    margin-top: 4px;
+    display: flex;
+    gap: 8px;
+}
+
+button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+ .edit-button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 4px 16px; /* Smaller button size */
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  .delete-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 4px 16px; /* Smaller button size */
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .note-content.scrollable-content {
+    max-height: 150px; 
+    overflow-y: auto; 
+    padding-right: 10px; 
+  }
+
+  
